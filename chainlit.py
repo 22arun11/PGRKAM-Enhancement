@@ -1,7 +1,6 @@
 import chainlit as cl
 import speech_recognition as sr
 import chainlit as cl
-import streamlit as st 
 from dotenv import load_dotenv
 import pandas as pd
 import openai
@@ -42,16 +41,6 @@ async def start():
             values=[ "Punjabi","Hindi"],
             initial_index=0,
             )]).send()
-    
-    
-    
-    
-    # actions = [
-    #     cl.Action(name="action_button", value="example_value", description="Click me!", size="large"),
-    #     cl.Action(name="action_button", value="example_value", description="Click me!", size="large"),
-        
-    # ]
-    # await cl.Message(content="Interact with this action button:", actions=actions).send()
     
 @cl.on_message
 async def main(message: cl.Message):
@@ -178,34 +167,3 @@ async def setup_agent(settings):
         except spr.RequestError as e:
             print("Unable to provide Required Output".format(e))
 
-
-
-# @cl.on_message
-# async def main(message: str):
-#     """Records audio from the microphone and transcribes it.
-
-#     Args:
-#         message: The message containing the audio recording.
-
-#     Returns:
-#         None.
-#     """
-    
-#     while True:
-#         r = sr.Recognizer()
-#         with sr.Microphone() as source:
-#             audio = r.listen(source)
-
-#         try:
-#             transcribed_text = r.recognize_google(audio)
-#             await cl.Message(content=f"Transcribed text: {transcribed_text}").send()
-#             break
-#         except:
-#             pass
-
-# @cl.on_chat_start
-# async def main():
-#     pass
-
-# if __name__ == "__main__":
-#     cl.run()

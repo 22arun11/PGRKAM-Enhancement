@@ -237,3 +237,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+const tooltipImage = document.getElementById("tooltip-image");
+    const tooltipFrame = document.getElementById("tooltip-frame");
+    
+    tooltipImage.addEventListener("mouseenter", function () {
+        tooltipFrame.style.display = "block";
+    });
+    
+    tooltipImage.addEventListener("mouseleave", function () {
+        tooltipFrame.style.display = "none";
+    });
+
+    tooltipFrame.addEventListener("mouseenter", function () {
+        tooltipFrame.style.display = "block";
+    });
+
+    tooltipFrame.addEventListener("mouseleave", function () {
+        tooltipFrame.style.display = "none";
+    });

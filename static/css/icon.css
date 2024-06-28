@@ -3,7 +3,25 @@
 	border-radius: 50%;
 	padding: 7px;
 }
-
+.image-holder {
+  height: 200px;
+  width: 200px;
+  position:relative; 
+}    
+.image-holder:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(206, 104, 54, 0.642);
+  transition: all .3s linear;
+}
+.image-holder:hover:before { 
+  background: none;
+}
 img.circle-image {
     position: fixed;
     top: 20px;
@@ -119,13 +137,13 @@ button.circle-button {
     border: none;
     outline: 0 !important;
     border-radius: 50px;
-    background: linear-gradient(145deg, #b05200, #1d1917);
+    background: linear-gradient(#b07038, #573b2b);
     box-shadow: 10px 10px 30px rgba(43, 42, 42, 0.4), -10px -10px 30px rgba(109, 109, 109, 0.4);
     transition: background 0.3s, transform 0.3s;
   }
   
   .profile_button:hover {
-    background: linear-gradient(145deg, #b05200, #1d1917);
+    background: linear-gradient(#b07038, #573b2b);;
     transform: scale(1.1);
   }
   
