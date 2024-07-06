@@ -127,7 +127,6 @@ def pdf_reader(file):
     fake_file_handle.close()
     return text
 
-
 def show_pdf(file_path):
     with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
